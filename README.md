@@ -5,7 +5,7 @@
  Перейдите в папку src и запустите командой poetry run python deskapp.py
  
 <h1>Требования</h1>
-Требуются инструменты PyQt5, PyQt5 и OpenCV . Установите с помощью:
+<p>Требуются инструменты PyQt5, PyQt5-tools и OpenCV. Установите с помощью:</p>
 <p>pip install pyqt5</p>
 <p>pip install pyqt5-tools</p>
-<p>pip install cv2.</p>
+<p>pip install cv2</p>
