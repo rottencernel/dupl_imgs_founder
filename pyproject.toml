@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "dupl_imgs_founder"
+version = "0.1.0"
+description = ""
+authors = ["rottenkernel"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+opencv-python = "^4.5.2"
+PyQt5 = "^5.15.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
