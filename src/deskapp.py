@@ -14,14 +14,14 @@ class Window(QtWidgets.QMainWindow, design.Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)  
-        self.btnDirSearch.clicked.connect(self.chose_directory) 
+        self.btnDirSearch.clicked.connect(self.choose_directory) 
         self.btnStart.clicked.connect(self.find_img_dupl) 
         self.btnOpenInDir.clicked.connect(self.open_img_in_dir)
 
         self.dir = None 
     
 
-    def chose_directory(self):
+    def choose_directory(self):
         self.clear_setapp()
         directory = QtWidgets.QFileDialog.getExistingDirectory(self, "Выбрать папку")
 
