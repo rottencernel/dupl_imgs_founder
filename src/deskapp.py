@@ -2,12 +2,15 @@ import sys
 import os
 from PyQt5 import QtWidgets 
 from PyQt5.QtGui import QPixmap
-sys.path.append(os.path.abspath("D:\Desktop\Projects\dupl_imgs_founder\src"))
 
 import design
 import founder
 
-path_to_img = 'D:\Desktop\Projects\dupl_imgs_founder\src\imgs'
+cat_tips_png = 'src\imgs\cattips.png'
+ctips = os.path.abspath(cat_tips_png)
+
+cur_cat_png = 'src\imgs\image.png'
+cur_cat = os.path.abspath(cur_cat_png)
  
 
 class Window(QtWidgets.QMainWindow, design.Ui_MainWindow):
@@ -39,7 +42,7 @@ class Window(QtWidgets.QMainWindow, design.Ui_MainWindow):
         self.table.clear()
         self.table.hide()
         self.btnOpenInDir.hide()
-        self.load_image(path_to_img + '\cattips.png')
+        self.load_image(ctips)
 
 
     def find_img_dupl(self):
@@ -67,7 +70,7 @@ class Window(QtWidgets.QMainWindow, design.Ui_MainWindow):
             table.setCellWidget(index, 1, QtWidgets.QCheckBox())
          
         table.show()
-        self.load_image(path_to_img + '\image.png')
+        self.load_image(cur_cat)
         self.btnOpenInDir.show()
 
 
@@ -92,7 +95,7 @@ class Window(QtWidgets.QMainWindow, design.Ui_MainWindow):
 def main():
     app = QtWidgets.QApplication(sys.argv)
     window = Window()
-    window.load_image(path_to_img + '\cattips.png')
+    window.load_image(ctips)
     window.show()
     sys.exit(app.exec_())
 
