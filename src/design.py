@@ -1,8 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import os
 
-ico_png = 'src\imgs\ico.png'
-ico = os.path.abspath(ico_png)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -73,7 +71,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Кот на поиске дубликатов картиночек"))
-        MainWindow.setWindowIcon(QtGui.QIcon(ico))
+        MainWindow.setWindowIcon(QtGui.QIcon('imgs/ico.png'))
         self.btnDirSearch.setText(_translate("MainWindow", "Выбрать папку"))
         self.btnStart.setText(_translate("MainWindow", "Начать сканирование"))
         self.btnOpenInDir.setText(_translate("MainWindow", "Открыть выбранные изображения"))
