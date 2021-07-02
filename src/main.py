@@ -5,12 +5,6 @@ from PyQt5.QtGui import QPixmap
 
 import design
 import founder
-
-cat_tips_png = 'src\imgs\cattips.png'
-ctips = os.path.abspath(cat_tips_png)
-
-cur_cat_png = 'src\imgs\image.png'
-cur_cat = os.path.abspath(cur_cat_png)
  
 
 class Window(QtWidgets.QMainWindow, design.Ui_MainWindow):
@@ -42,7 +36,7 @@ class Window(QtWidgets.QMainWindow, design.Ui_MainWindow):
         self.table.clear()
         self.table.hide()
         self.btnOpenInDir.hide()
-        self.load_image(ctips)
+        self.load_image('imgs/cattips.py')
 
 
     def find_img_dupl(self):
@@ -70,7 +64,7 @@ class Window(QtWidgets.QMainWindow, design.Ui_MainWindow):
             table.setCellWidget(index, 1, QtWidgets.QCheckBox())
          
         table.show()
-        self.load_image(cur_cat)
+        self.load_image('imgs/image.png)
         self.btnOpenInDir.show()
 
 
@@ -95,7 +89,7 @@ class Window(QtWidgets.QMainWindow, design.Ui_MainWindow):
 def main():
     app = QtWidgets.QApplication(sys.argv)
     window = Window()
-    window.load_image(ctips)
+    window.load_image('imgs/cattips.png')
     window.show()
     sys.exit(app.exec_())
 
